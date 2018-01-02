@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".CustomViewActivity"/>
+        <activity android:name=".Custom.CustomViewActivity"/>
+        <activity android:name=".LearnRxjava2.ui.LearnRxJava2Activity"/>
     </application>
 
 </manifest>

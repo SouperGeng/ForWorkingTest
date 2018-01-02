@@ -11,14 +11,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@mipmap/gkz_background">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/custom_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/gkz_str_custom_view"/>
+
+        <Button
+            android:id="@+id/rxjava_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gkz_str_rxjava_view"/>
+        <Button
+            android:id="@+id/dialog_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gkz_str_dialog_view"/>
 
     </LinearLayout>
 

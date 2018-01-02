@@ -11,6 +11,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    private long timeMillis = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,5 +49,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if ((System.currentTimeMillis() - timeMillis)>2000){
+            timeMillis = System.currentTimeMillis();
+            Snackbar.make(getWindow().getDecorView().findViewById(android.R.id.content),"再点一次退出程序",Snackbar.LENGTH_LONG).show();
+        } else {
+            super.onBackPressed();
+        }
+
     }
 }

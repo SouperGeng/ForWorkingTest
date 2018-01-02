@@ -1,9 +1,11 @@
-package com.souper.customview;
+package com.example.soupergeng.forworkingtest.Custom.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -66,7 +68,7 @@ public class JuniorCustomView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //会在原有的绘制效果上加一层半透明的遮罩
-        canvas.drawColor(Color.parseColor("#88880000"));
+        canvas.drawColor(Color.parseColor("#88110011"));
         //画矩形
         canvas.drawRect(100,100,200,200,mPaint);
         mPaint.setStrokeWidth(Color.RED);
@@ -102,6 +104,43 @@ public class JuniorCustomView extends View {
 
         //画线
         canvas.drawLine(100,750,450,750,mPaint);
+
+        //画多个线条  汉字  工字
+        float[] points = {20, 800, 120, 800, 70, 800, 70, 920, 20, 920, 120, 920};
+        canvas.drawLines(points,mPaint);
+
+        //画圆角矩形
+        RectF rectF = new RectF(600,600,900,900);
+        mPaint.setAntiAlias(true);
+        mPaint.setColor(Color.GRAY);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawRoundRect(rectF,50,50,mPaint);
+
+        //绘制弧形或扇形
+        mPaint.setColor(Color.RED);
+        RectF rectG = new RectF(100.0f,1000.0f,500.0f,1400.0f);
+        canvas.drawArc(rectG,-120,20,true,mPaint);
+        canvas.drawArc(rectG,20,140,false,mPaint);
+        mPaint.setStyle(Paint.Style.STROKE);
+        canvas.drawArc(rectG,180,45,true,mPaint);
+
+        //绘制自定义图形
+        Path path = new Path();
+        mPaint.setStyle(Paint.Style.FILL);
+        // 第一组
+        path.addCircle(650,1150,100, Path.Direction.CW);
+        canvas.drawPath(path,mPaint);
+        // 第二组
+        Path path1 = new Path();
+        path1.moveTo(650,1300);
+        mPaint.setColor(Color.CYAN);
+        mPaint.setStrokeWidth(20);
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
+        mPaint.setStyle(Paint.Style.STROKE);
+        path1.lineTo(750,1300);
+        path1.rLineTo(100,-100);
+        canvas.drawPath(path1,mPaint);
+
 
 
     }
