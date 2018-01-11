@@ -5,4 +5,5 @@
     <string name="gkz_str_custom_view">自定义View</string>
     <string name="gkz_str_rxjava_view">Rxjava2学习</string>
     <string name="gkz_str_dialog_view">Dialog弹框</string>
+    <string name="gkz_str_recycler_view">多布局Item</string>
 </resources>

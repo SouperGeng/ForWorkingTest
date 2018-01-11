@@ -30,6 +30,14 @@
             android:layout_height="wrap_content"
             android:text="@string/gkz_str_dialog_view"/>
 
+        <Button
+            android:id="@+id/recyler_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gkz_str_dialog_view"/>
+
+
+
     </LinearLayout>
 
 

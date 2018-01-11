@@ -23,6 +23,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     private Button mCustomViewBtn;
     private Button mRxJavaBtn;
     private Button mDialogBtn;
+    private Button mRecylerBtn;
 
     public MainActivityFragment() {
     }
@@ -38,6 +39,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
         mCustomViewBtn = (Button) view.findViewById(R.id.custom_btn);
         mRxJavaBtn = (Button) view.findViewById(R.id.rxjava_btn);
         mDialogBtn = (Button) view.findViewById(R.id.dialog_btn);
+        mRecylerBtn = (Button) view.findViewById(R.id.recyler_btn);
     }
 
     @Override
@@ -50,6 +52,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
         mCustomViewBtn.setOnClickListener(this);
         mRxJavaBtn.setOnClickListener(this);
         mDialogBtn.setOnClickListener(this);
+        mRecylerBtn.setOnClickListener(this);
     }
 
     @Override
@@ -65,9 +68,16 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
             case R.id.dialog_btn:
                 openDialog();
                 break;
+            case R.id.recyler_btn:
+                startRecycler();
+                break;
             default:
                 break;
         }
+    }
+
+    private void startRecycler() {
+        startActivity(new Intent(getActivity(),DiscoryActivity.class));
     }
 
     private void openDialog() {

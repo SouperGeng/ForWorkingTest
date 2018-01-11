@@ -8,4 +8,22 @@
         android:layout_height="wrap_content"
         android:text="Learning Rxjava"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/rxjava_text_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/gkz_welcome_text_bg_selector"
+            android:text="跳过"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"/>
+    </FrameLayout>
+
 </LinearLayout>
